@@ -14,7 +14,9 @@ const Banks = () => {
     <Container maxW='100%'>
       <Center as='section' py={20}>
         <VStack divider={<StackDivider />} gap={8}>
-          <Heading>Bancos que trabajamos</Heading>
+          <Heading textAlign={['center', 'center']}>
+            Bancos que trabajamos
+          </Heading>
           <Flex
             maxW='900px'
             flexWrap='wrap'

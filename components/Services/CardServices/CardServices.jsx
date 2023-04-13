@@ -6,7 +6,7 @@ const CardServices = props => {
   return (
     <Flex
       direction='column'
-      alignItems={{ md: 'flex-start', sm: 'center' }}
+      alignItems={['center', 'flex-start']}
       bg='white'
       p={4}
       gap={5}
@@ -15,7 +15,7 @@ const CardServices = props => {
     >
       <Image src={image} alt={title} width={300} height={230} />
       <Heading fontSize='30px'>{title}</Heading>
-      <Text maxW='300px' textAlign={{ md: 'left', sm: 'center' }}>
+      <Text maxW='300px' textAlign={['center', 'left']}>
         {description}
       </Text>
       <Button colorScheme='yellow' mt={5}>

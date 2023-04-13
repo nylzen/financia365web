@@ -54,7 +54,7 @@ const Instagram = () => {
           </Button>
         </Stack>
         <Stack
-          direction={{ md: 'row', sm: 'column' }}
+          direction={['column', 'column', 'row']}
           alignItems='center'
           gap={2}
         >

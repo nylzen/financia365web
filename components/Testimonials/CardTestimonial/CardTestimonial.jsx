@@ -4,7 +4,7 @@ const CardTestimonial = ({ img, name, testimonial, rating }) => {
   return (
     <VStack key={testimonial.id}>
       <Stack
-        width='370px'
+        width={['100%', '100%', '100%', '370px']}
         border='1px'
         borderRadius={10}
         p={5}
