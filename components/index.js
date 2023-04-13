@@ -1,0 +1,15 @@
+export { default as Banks } from './Banks/Banks';
+export * from './Banks/data';
+export { default as CTA } from './CTA/CTA';
+export { default as Footer } from './Footer/Footer';
+export { default as Hero } from './Hero/Hero';
+export { default as Instagram } from './Instagram/Instagram';
+export * from './Instagram/data';
+export { default as Layout } from './Layout/Layout';
+export { default as Navbar } from './Navbar/Navbar';
+export * from './Services';
+export { default as CardServices } from './Services/CardServices/CardServices';
+export { default as CardTestimonial } from './Testimonials/CardTestimonial/CardTestimonial';
+export { default as Testimonials } from './Testimonials/Testimonials';
+export * from './Testimonials/data';
+export * from './index';
