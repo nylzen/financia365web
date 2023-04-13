@@ -4,6 +4,7 @@ import {
   Flex,
   IconButton,
   Link,
+  Stack,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
@@ -19,6 +20,7 @@ const Navbar = () => {
         maxW='1100px'
         margin='auto'
         py={5}
+        px={5}
         justifyContent='space-between'
         alignItems='center'
       >
@@ -49,9 +51,11 @@ const Navbar = () => {
         <IconButton
           aria-label='Abrir menú'
           display={{ base: 'block', md: 'none' }}
+          position={'fixed'}
+          right={5}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           onClick={isOpen ? onClose : onOpen}
-          variant='outline'
+          // variant='outline'
           zIndex={2}
         />
 
@@ -60,7 +64,7 @@ const Navbar = () => {
             bg='white'
             h='100%'
             w='100%'
-            position='absolute'
+            position='fixed'
             top='0'
             right='0'
             zIndex='1'
@@ -68,20 +72,19 @@ const Navbar = () => {
             transform='translateX(0%)'
             display={{ base: 'block', md: 'none' }}
           >
-            <Box p={4}>
-              <Link href='#' mr={4} mb={2}>
-                Enlace 1
-              </Link>
-              <Link href='#' mr={4} mb={2}>
-                Enlace 2
-              </Link>
-              <Link href='#' mr={4} mb={2}>
-                Enlace 3
-              </Link>
-              <Link href='#' mr={4} mb={2}>
-                Enlace 4
-              </Link>
-            </Box>
+            <Stack
+              p={4}
+              alignItems='center'
+              justifyContent='center'
+              h='100vh'
+              gap={8}
+              fontSize={'2xl'}
+            >
+              <Link href='#'>Home</Link>
+              <Link href='#'>Nosotros</Link>
+              <Link href='#'>Servicios</Link>
+              <Link href='#'>Contacto</Link>
+            </Stack>
           </Box>
         )}
       </Flex>

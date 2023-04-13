@@ -23,7 +23,7 @@ const Hero = () => {
         <Stack
           direction={['column', 'column', 'row']}
           spacing={8}
-          align={['center', 'center', 'flex-start']}
+          align={['center', 'center']}
         >
           <VStack maxW='500' gap={5} alignItems={['center', 'flex-start']}>
             <Heading textAlign={['center', 'left']}>
