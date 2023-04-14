@@ -76,12 +76,12 @@ const Navbar = () => {
               <Link href='/nosotros' onClick={onClose}>
                 Nosotros
               </Link>
-              <Link href='#' onClick={onClose}>
+              <ScrollLink to='services' onClick={onClose}>
                 Servicios
-              </Link>
-              <Link href='#' onClick={onClose}>
+              </ScrollLink>
+              <ScrollLink to='services' onClick={onClose}>
                 Contacto
-              </Link>
+              </ScrollLink>
             </Stack>
           </Box>
         )}
