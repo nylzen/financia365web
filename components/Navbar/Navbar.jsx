@@ -1,7 +1,6 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Button,
   Flex,
   IconButton,
   Link,
@@ -9,8 +8,8 @@ import {
   StackDivider,
   useDisclosure,
 } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -35,19 +34,11 @@ const Navbar = () => {
           />
         </Link>
 
-        <Box display={{ base: 'none', md: 'flex' }}>
-          <Link href='/' mr={4}>
-            Home
-          </Link>
-          <Link href='/nosotros' mr={4}>
-            Nosotros
-          </Link>
-          <Link href='#' mr={4}>
-            Servicios
-          </Link>
-          <Link href='#' mr={4}>
-            Contacto
-          </Link>
+        <Box display={{ base: 'none', md: 'flex' }} gap={4}>
+          <Link href='/'>Home</Link>
+          <Link href='/nosotros'>Nosotros</Link>
+          <Link href='#'>Servicios</Link>
+          <Link href='#'>Contacto</Link>
         </Box>
 
         <IconButton

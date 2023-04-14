@@ -11,7 +11,7 @@ import { servicesData } from './data';
 
 const Services = () => {
   return (
-    <Container maxW='100%'>
+    <Container maxW='100%' id='services'>
       <Center as='section' py={20} margin='auto' maxW={['1200px', '100%']}>
         <VStack bg='brand.black' color='white' p={10} borderRadius={20}>
           <VStack gap={5}>
