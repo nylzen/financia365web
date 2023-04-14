@@ -1,3 +1,6 @@
+export { default as AboutHero } from './AboutHero/AboutHero';
+export { default as AboutInfo } from './AboutInfo/AboutInfo';
+export { default as AboutTeam } from './AboutTeam/AboutTeam';
 export { default as Banks } from './Banks/Banks';
 export * from './Banks/data';
 export { default as CTA } from './CTA/CTA';

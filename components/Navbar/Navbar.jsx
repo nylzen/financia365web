@@ -1,13 +1,15 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
+  Button,
   Flex,
   IconButton,
   Link,
   Stack,
-  Text,
+  StackDivider,
   useDisclosure,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -33,7 +35,7 @@ const Navbar = () => {
           />
         </Box>
 
-        <Box display={{ base: 'none', md: 'block' }}>
+        <Box display={{ base: 'none', md: 'flex' }}>
           <Link href='#' mr={4}>
             Home
           </Link>
@@ -51,11 +53,10 @@ const Navbar = () => {
         <IconButton
           aria-label='Abrir menú'
           display={{ base: 'block', md: 'none' }}
-          position={'fixed'}
+          position={isOpen ? 'fixed' : 'static'}
           right={5}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           onClick={isOpen ? onClose : onOpen}
-          // variant='outline'
           zIndex={2}
         />
 
@@ -68,9 +69,6 @@ const Navbar = () => {
             top='0'
             right='0'
             zIndex='1'
-            transition='transform 0.3s ease-in-out'
-            transform='translateX(0%)'
-            display={{ base: 'block', md: 'none' }}
           >
             <Stack
               p={4}
@@ -78,12 +76,21 @@ const Navbar = () => {
               justifyContent='center'
               h='100vh'
               gap={8}
-              fontSize={'2xl'}
+              fontSize={'3xl'}
+              divider={<StackDivider borderColor='gray.200' />}
             >
-              <Link href='#'>Home</Link>
-              <Link href='#'>Nosotros</Link>
-              <Link href='#'>Servicios</Link>
-              <Link href='#'>Contacto</Link>
+              <Link href='/' onClick={onClose}>
+                Home
+              </Link>{' '}
+              <Link href='/nosotros' onClick={onClose}>
+                Nosotros
+              </Link>
+              <Link href='#' onClick={onClose}>
+                Servicios
+              </Link>
+              <Link href='#' onClick={onClose}>
+                Contacto
+              </Link>
             </Stack>
           </Box>
         )}
