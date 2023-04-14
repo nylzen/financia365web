@@ -1,4 +1,5 @@
 import {
+  AspectRatio,
   Box,
   Button,
   Center,
@@ -18,7 +19,11 @@ const Contact = () => {
   return (
     <Container maxW='100%' as='section' id='contacto' py={20}>
       <Center maxW={['100%', '100%', '100%', '1200px']} margin={'auto'}>
-        <Stack direction={['column', 'column', 'column', 'row']} spacing={20}>
+        <Stack
+          w='90%'
+          direction={['column', 'column', 'column', 'row']}
+          spacing={[10, 10, 10, 20]}
+        >
           <VStack
             direction='column'
             alignItems='start'
@@ -40,13 +45,10 @@ const Contact = () => {
             </FormControl>
             <Button colorScheme='yellow'>Enviar</Button>
           </VStack>
-          <Box>
-            <iframe
-              title='Ubicación Financia'
-              src={mapUrl}
-              width='400'
-              height='400'
-            />
+          <Box minH='400px' w='100%'>
+            <AspectRatio ratio={1}>
+              <iframe src={mapUrl} />
+            </AspectRatio>
           </Box>
         </Stack>
       </Center>
