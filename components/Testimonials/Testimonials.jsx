@@ -10,7 +10,7 @@ const Testimonials = () => {
     <Container maxW='100%'>
       <Center as='section' flexDirection='column' gap={10} py={10}>
         <Heading textAlign='center'>Las opiniones que importan</Heading>
-        <Stack direction={['column', , 'column', 'row']}>
+        <Stack direction={['column', 'column', 'row']}>
           {testimonialsData.map(testimonial => (
             <CardTestimonial key={testimonial.id} {...testimonial} />
           ))}

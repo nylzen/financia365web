@@ -16,7 +16,7 @@ const Footer = () => {
       <Container as={Stack} maxW='6xl' color='white'>
         <SimpleGrid
           templateColumns={{ sm: '1fr', md: '2fr 2fr 2fr 1fr' }}
-          placeItems={{ md: 'center', sm: 'start' }}
+          placeItems={['center', 'start']}
           alignItems='start'
           spacing={{ md: 8, sm: 10 }}
         >

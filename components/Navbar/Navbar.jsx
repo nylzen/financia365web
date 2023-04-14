@@ -37,7 +37,7 @@ const Navbar = () => {
         <Box display={{ base: 'none', md: 'flex' }} gap={4}>
           <Link href='/'>Home</Link>
           <Link href='/nosotros'>Nosotros</Link>
-          <Link href='#'>Servicios</Link>
+          <ScrollLink to='services'>Servicios</ScrollLink>
           <Link href='#'>Contacto</Link>
         </Box>
 
