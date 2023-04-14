@@ -30,7 +30,7 @@ const Navbar = () => {
             src='/images/logo.png'
             alt='Financia 365 logo'
             width={200}
-            height={200}
+            height={80}
           />
         </Link>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link href='/'>Home</Link>
           <Link href='/nosotros'>Nosotros</Link>
           <ScrollLink to='services'>Servicios</ScrollLink>
-          <Link href='#'>Contacto</Link>
+          <ScrollLink to='contacto'>Contacto</ScrollLink>
         </Box>
 
         <IconButton
@@ -79,7 +79,7 @@ const Navbar = () => {
               <ScrollLink to='services' onClick={onClose}>
                 Servicios
               </ScrollLink>
-              <ScrollLink to='services' onClick={onClose}>
+              <ScrollLink to='contacto' onClick={onClose}>
                 Contacto
               </ScrollLink>
             </Stack>

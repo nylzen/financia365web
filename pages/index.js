@@ -1,6 +1,7 @@
 import {
   Banks,
   CTA,
+  Contact,
   Hero,
   Instagram,
   Navbar,
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <CTA />
       <Banks />
+      <Contact />
       <Testimonials />
       <Instagram />
     </>

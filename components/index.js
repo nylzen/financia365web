@@ -1,9 +1,11 @@
 export { default as AboutHero } from './AboutHero/AboutHero';
 export { default as AboutInfo } from './AboutInfo/AboutInfo';
 export { default as AboutTeam } from './AboutTeam/AboutTeam';
+export * from './AboutTeam/data';
 export { default as Banks } from './Banks/Banks';
 export * from './Banks/data';
 export { default as CTA } from './CTA/CTA';
+export { default as Contact } from './Contact/Contact';
 export { default as Footer } from './Footer/Footer';
 export { default as Hero } from './Hero/Hero';
 export { default as Instagram } from './Instagram/Instagram';
@@ -15,4 +17,3 @@ export { default as CardServices } from './Services/CardServices/CardServices';
 export { default as CardTestimonial } from './Testimonials/CardTestimonial/CardTestimonial';
 export { default as Testimonials } from './Testimonials/Testimonials';
 export * from './Testimonials/data';
-export * from './index';
