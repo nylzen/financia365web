@@ -26,20 +26,20 @@ const Navbar = () => {
         justifyContent='space-between'
         alignItems='center'
       >
-        <Box>
+        <Link href='/'>
           <Image
             src='/images/logo.png'
             alt='Financia 365 logo'
             width={200}
             height={200}
           />
-        </Box>
+        </Link>
 
         <Box display={{ base: 'none', md: 'flex' }}>
-          <Link href='#' mr={4}>
+          <Link href='/' mr={4}>
             Home
           </Link>
-          <Link href='#' mr={4}>
+          <Link href='/nosotros' mr={4}>
             Nosotros
           </Link>
           <Link href='#' mr={4}>
