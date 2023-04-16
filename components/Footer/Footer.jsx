@@ -16,9 +16,9 @@ const Footer = () => {
       <Container as={Stack} maxW='6xl' color='white'>
         <SimpleGrid
           templateColumns={{ sm: '1fr', md: '2fr 2fr 2fr 1fr' }}
-          placeItems={['center', 'start']}
+          placeItems={['start', 'center']}
           alignItems='start'
-          spacing={{ md: 8, sm: 10 }}
+          spacing={[4, 4, 4, 10]}
         >
           <Stack spacing={4}>
             <Box>
@@ -63,7 +63,7 @@ const Footer = () => {
             <Link>Políticas de privacidad</Link>
             <Link>Protección de datos</Link>
             <Link>Texto legal</Link>
-            <Link>Cookies</Link>
+            <Link href='/cookies'>Cookies</Link>
           </Stack>
         </SimpleGrid>
       </Container>
