@@ -4,7 +4,6 @@ import {
   Contact,
   Hero,
   Instagram,
-  Navbar,
   Services,
   Testimonials,
 } from '@/components';
