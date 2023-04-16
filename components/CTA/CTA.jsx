@@ -7,6 +7,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import Link from 'next/link';
+import { whatsappLink } from '../WhatsappBtn/WhatsAppBtn';
 
 const CTA = () => {
   return (
@@ -35,7 +36,12 @@ const CTA = () => {
               ¡Toma acción ahora y consigue el dinero que necesitas para tus
               proyectos y metas!
             </Heading>
-            <Button as='a' colorScheme='yellow' href='https://www.google.com'>
+            <Button
+              as='a'
+              colorScheme='yellow'
+              href={whatsappLink}
+              target='_blank'
+            >
               Solicita asesoría
             </Button>
           </VStack>

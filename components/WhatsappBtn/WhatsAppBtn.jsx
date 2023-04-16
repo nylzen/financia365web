@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
 import { BsWhatsapp } from 'react-icons/bs';
 
-const whatsappLink = 'https://wa.link/95wgny';
+export const whatsappLink = 'https://wa.link/95wgny';
 
 const WhatsAppBtn = () => {
   return (

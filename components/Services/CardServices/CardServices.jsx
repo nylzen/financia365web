@@ -1,3 +1,4 @@
+import { whatsappLink } from '@/components/WhatsappBtn/WhatsAppBtn';
 import { Button, Flex, Heading, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 
@@ -18,7 +19,13 @@ const CardServices = props => {
       <Text maxW='300px' textAlign={['center', 'left']}>
         {description}
       </Text>
-      <Button colorScheme='yellow' mt={5}>
+      <Button
+        colorScheme='yellow'
+        mt={5}
+        as='a'
+        href={whatsappLink}
+        target='_blank'
+      >
         Más información
       </Button>
     </Flex>

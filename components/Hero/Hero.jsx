@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { whatsappLink } from '../WhatsappBtn/WhatsAppBtn';
 
 const Hero = () => {
   return (
@@ -33,7 +34,14 @@ const Hero = () => {
               En <b>Financia365</b>, nos esforzamos por brindarte el mejor
               asesoramiento en la hipoteca de tu próxima vivienda.
             </Text>
-            <Button colorScheme='yellow'>Solicita asesoría</Button>
+            <Button
+              colorScheme='yellow'
+              as='a'
+              href={whatsappLink}
+              target='_blank'
+            >
+              Solicita asesoría
+            </Button>
           </VStack>
           <motion.div
             initial={{
