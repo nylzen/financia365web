@@ -41,10 +41,14 @@ const Footer = () => {
           <Stack spacing={6}>
             <Text fontWeight='bold'>Grupo</Text>
             <Stack>
-              <Link href='#' isExternal>
+              <Link
+                href='https://www.viviendas365.com'
+                target='_blank'
+                isExternal
+              >
                 Vivienda365 <ExternalLinkIcon mx='2px' color='brand.primary' />
               </Link>
-              <Link href='#' isExternal>
+              <Link href='https://www.obras365.com' target='_blank' isExternal>
                 Obras y Proyectos 365
                 <ExternalLinkIcon mx='2px' color='brand.primary' />
               </Link>
