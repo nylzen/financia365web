@@ -60,9 +60,9 @@ const Footer = () => {
             </Stack>
           </Stack>
           <Stack color='GrayText'>
-            <Link>Políticas de privacidad</Link>
-            <Link>Protección de datos</Link>
-            <Link>Texto legal</Link>
+            <Link href='/politicas-de-privacidad'>Políticas de privacidad</Link>
+            <Link href='/proteccion-de-datos'>Protección de datos</Link>
+            <Link href='/texto-legal'>Texto legal</Link>
             <Link href='/cookies'>Cookies</Link>
           </Stack>
         </SimpleGrid>
