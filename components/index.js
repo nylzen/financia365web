@@ -17,3 +17,4 @@ export { default as CardServices } from './Services/CardServices/CardServices';
 export { default as CardTestimonial } from './Testimonials/CardTestimonial/CardTestimonial';
 export { default as Testimonials } from './Testimonials/Testimonials';
 export * from './Testimonials/data';
+export { default as WhatsAppBtn } from './WhatsappBtn/WhatsAppBtn';
