@@ -9,12 +9,14 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const pathName = typeof window !== 'undefined' && window.location.pathname;
+  const router = useRouter();
+  // const pathName = typeof window !== 'undefined' && window.location.pathname;
 
   return (
     <Box bg='gray.100'>
@@ -35,12 +37,23 @@ const Navbar = () => {
             height={80}
           />
         </Link>
-        <Box display={{ base: 'none', md: 'flex' }} gap={4}>
-          <Link href='/'>Home</Link>
-          <Link href='/nosotros'>Nosotros</Link>
-          <ScrollLink to='services'>Servicios</ScrollLink>
-          <ScrollLink to='contacto'>Contacto</ScrollLink>
-        </Box>
+        {router.pathname === '/' && (
+          <Box display={{ base: 'none', md: 'flex' }} gap={4}>
+            <Link href='/'>Home</Link>
+            <Link href='/nosotros'>Nosotros</Link>
+            <ScrollLink to='services'>Servicios</ScrollLink>
+            <ScrollLink to='contacto'>Contacto</ScrollLink>
+          </Box>
+        )}
+
+        {router.pathname !== '/' && (
+          <Box display={{ base: 'none', md: 'flex' }} gap={4}>
+            <Link href='/'>Home</Link>
+            <Link href='/nosotros'>Nosotros</Link>
+            <Link href='/#services'>Servicios</Link>
+            <Link href='/#contacto'>Contacto</Link>
+          </Box>
+        )}
         <IconButton
           aria-label='Abrir menú'
           display={{ base: 'block', md: 'none' }}
@@ -50,7 +63,7 @@ const Navbar = () => {
           onClick={isOpen ? onClose : onOpen}
           zIndex={2}
         />
-        {isOpen && pathName === '/' && (
+        {isOpen && router.pathname === '/' && (
           <Box
             bg='white'
             h='100%'
@@ -85,7 +98,7 @@ const Navbar = () => {
           </Box>
         )}
 
-        {isOpen && pathName !== '/' && (
+        {isOpen && router.pathname !== '/' && (
           <Box
             bg='white'
             h='100%'
