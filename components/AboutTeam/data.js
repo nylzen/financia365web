@@ -21,12 +21,12 @@ export const team = [
     id: 4,
     name: 'Neyla',
     position: 'Asesora financiera',
-    image: '/images/about/team/neyla.svg',
+    image: '/images/about/team/neylateam.svg',
   },
   {
     id: 5,
     name: 'Marilena',
     position: 'Asesora financiera',
-    image: '/images/about/team/marilena.svg',
+    image: '/images/about/team/mariteam.svg',
   },
 ];
