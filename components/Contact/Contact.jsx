@@ -38,50 +38,27 @@ const Contact = () => {
             spacing={5}
           >
             <Heading>Contáctanos</Heading>
-            {/* <Stack
-              as='form'
-              minW={['100%', '100%', '100%', '400px']}
-              spacing={5}
-              alignItems='start'
-            >
-              <FormControl isRequired>
-                <FormLabel>Nombre</FormLabel>
-                <Input name='user_name' />
-              </FormControl>
-              <FormControl isRequired>
-                <FormLabel>Teléfono</FormLabel>
-                <Input name='user_phone' />
-              </FormControl>
-              <FormControl isRequired>
-                <FormLabel>Email</FormLabel>
-                <Input name='user_email' />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Mensaje</FormLabel>
-                <Textarea name='user_msg' />
-              </FormControl>
-              <Button colorScheme='yellow' type='submit'>
-                Enviar
-              </Button>
-            </Stack> */}
+
             <Formik
               initialValues={contactFormInitialValues}
               validationSchema={contactFormValidationSchema}
               onSubmit={(values, actions) => {
-                console.log(values);
                 const templateParams = {
                   name: values.name,
                   email: values.email,
                   phone: values.phone,
                   message: values.message,
                 };
-                emailjs.send(
-                  'service_1ad3xd3',
-                  'template_axxvxkv',
+
+                const emailSend = emailjs.send(
+                  process.env.NEXT_PUBLIC_SERVICE_ID,
+                  process.env.NEXT_PUBLIC_TEMPLATE_ID,
                   templateParams,
-                  'qjSySmslaSv6DxTS3'
+                  process.env.NEXT_PUBLIC_PUBLIC_KEY
                 );
+
                 actions.resetForm();
+                return emailSend;
               }}
             >
               {({ errors, touched }) => (
@@ -124,7 +101,7 @@ const Contact = () => {
                       type='submit'
                       alignSelf='flex-start'
                     >
-                      Enviar
+                      Enviar Mensaje
                     </Button>
                   </VStack>
                 </Form>
