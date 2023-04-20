@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Center,
   Container,
@@ -7,7 +8,6 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { whatsappLink } from '../WhatsappBtn/WhatsAppBtn';
 
@@ -43,26 +43,14 @@ const Hero = () => {
               Solicita asesoría
             </Button>
           </VStack>
-          <motion.div
-            initial={{
-              transform: 'translateY(50px)',
-              opacity: 0,
-            }}
-            animate={{
-              transform: 'translateY(0px)',
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.5,
-            }}
-          >
+          <Box>
             <Image
               src='/images/hero_img.svg'
               alt='Hero Image'
               width={502}
               height={502}
             />
-          </motion.div>
+          </Box>
         </Stack>
       </Center>
     </Container>
