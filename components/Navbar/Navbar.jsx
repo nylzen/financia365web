@@ -41,8 +41,12 @@ const Navbar = () => {
           <Box display={{ base: 'none', md: 'flex' }} gap={4}>
             <Link href='/'>Home</Link>
             <Link href='/nosotros'>Nosotros</Link>
-            <ScrollLink to='services'>Servicios</ScrollLink>
-            <ScrollLink to='contacto'>Contacto</ScrollLink>
+            <Link as={ScrollLink} to='services'>
+              Servicios
+            </Link>
+            <Link as={ScrollLink} to='contacto'>
+              Contacto
+            </Link>
           </Box>
         )}
 
