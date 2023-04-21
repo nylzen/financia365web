@@ -1,3 +1,4 @@
+import { heroBlur } from '@/utils/hero.blur';
 import {
   Box,
   Button,
@@ -46,7 +47,9 @@ const Hero = () => {
           <Box>
             <Image
               priority
-              src='/images/s_hero_img.webp'
+              src='/images/s_hero.webp'
+              blurDataURL={heroBlur}
+              placeholder='blur'
               alt='Hero Image'
               width={502}
               height={502}
