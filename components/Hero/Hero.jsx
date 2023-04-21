@@ -45,7 +45,8 @@ const Hero = () => {
           </VStack>
           <Box>
             <Image
-              src='/images/hero_img.svg'
+              priority
+              src='/images/s_hero_img.webp'
               alt='Hero Image'
               width={502}
               height={502}

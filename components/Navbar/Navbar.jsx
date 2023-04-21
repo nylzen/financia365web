@@ -33,7 +33,7 @@ const Navbar = () => {
           <Image
             src='/images/logo.png'
             alt='Financia 365 logo'
-            width={200}
+            width={256}
             height={80}
           />
         </Link>

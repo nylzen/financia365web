@@ -29,8 +29,8 @@ const Banks = () => {
               <Image
                 key={bank.id}
                 src={bank.logo}
-                width={200}
-                height={100}
+                width={250}
+                height={bank.height}
                 alt={bank.name}
               />
             ))}

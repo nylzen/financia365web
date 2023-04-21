@@ -14,7 +14,7 @@ const CardServices = props => {
       borderRadius={10}
       color='brand.black'
     >
-      <Image src={image} alt={title} width={300} height={230} />
+      <Image src={image} alt={title} width={309} height={206} />
       <Heading fontSize='30px'>{title}</Heading>
       <Text maxW='300px' textAlign={['center', 'left']}>
         {description}
